@@ -1,0 +1,165 @@
+.card-spotlight {
+  position: relative;
+  width: 25rem;
+  height: auto;
+  border-radius: 1.5rem;
+  border: 1px solid #222;
+  background-color:rgb(116, 78, 78);
+  padding: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --spotlight-color: rgba(255, 255, 255, 0.05);
+}
+
+.card-spotlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at var(--mouse-x) var(--mouse-y),
+    var(--spotlight-color),
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.card-spotlight:hover::before,
+.card-spotlight:focus-within::before {
+  opacity: 0.6;
+}
+
+.containerProyects{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
+.card-description {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.card-languages {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  padding: 0;
+}
+
+.card-language {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #ddd;
+  align-content: center;
+}
+.containerLiveDemo{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card-button {
+  display: inline-block;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: rgb(179, 57, 57);
+  color: #ddd;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  
+}
+
+
+@media screen and (max-width: 1024px) {
+  .containerProyects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-spotlight {
+    width: 22rem;
+  }
+  .card-title {
+    font-size: 1.5rem;
+  }
+  .card-description {
+    font-size: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .containerProyects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .custom-spotlight-card{
+    padding-bottom: 1rem;
+  }
+  .card-spotlight {
+    width: 80%;
+    padding: 1.5rem;
+  }
+  .card-title {
+    font-size: 1.3rem;
+  }
+  .card-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .containerProyects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card-spotlight {
+    width: 95%;
+    padding: 1rem;
+    
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .card-description {
+    font-size: 0.9rem;
+  }
+  .card-languages {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card-language {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+  .card-button {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}

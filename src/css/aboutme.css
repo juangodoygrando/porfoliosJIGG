@@ -1,0 +1,103 @@
+
+
+.aboutmeBody {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "imagen texto"
+    "boton boton";
+  padding: 1.7rem;
+  background-color: rgb(255, 255, 255, 10%);
+  border-radius: 0.8rem;
+  gap: 1rem;
+}
+
+.aboutmeBodyImg {
+  display: flex;
+  grid-area: imagen;
+  align-items: center;
+  justify-content: center;
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+.aboutmeBodyText {
+  display: grid;
+  grid-area: texto;
+  justify-content:space-between;
+  line-height: 1.3;
+
+  p {
+    width: 100%;
+    color: white;
+    padding: 0.5rem 0 1rem;
+    font-size: 1.3rem;
+  }
+}
+.conteinerButton {
+  display: flex;
+  grid-area: boton;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.buttonDescargarCV {
+  border: none;
+  color: white;
+  border-radius: 6px;
+  background-color: transparent;
+  font-size: 1.3rem;
+  text-decoration: none;
+
+  &:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 1024px) {
+  .aboutmeBody {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "imagen"
+      "texto"
+      "boton";
+    text-align: center;
+  }
+
+  .aboutmeBodyImg {
+    display: flex;
+    justify-content: center;
+  }
+
+  .aboutmeBodyImg img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .aboutmeBodyText {
+    max-width: 100%;
+  }
+}
+
+/* Para móviles */
+@media (max-width: 768px) {
+  .aboutmeBody {
+    width: 95%;
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .buttonDescargarCV {
+    font-size: 1.2rem;
+  }
+  .aboutmeBodyText {
+    max-width: 100%;
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
