@@ -13,6 +13,14 @@ const Navbar = ({
 }) => {
   const animationDuration = `${speed}s`;
 
+  const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    const offset = 50; 
+    const topPosition = section.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: topPosition, behavior: "smooth" });
+  }
+};
   return (
     <nav className="navBar">
       <div className="nav_logo">
@@ -25,18 +33,21 @@ const Navbar = ({
         <div
           className={`shiny-text ${disabled ? "disabled" : ""} ${className}`}
           style={{ animationDuration }}
+          onClick={() => scrollToSection("proyects")}
         >
           {Proyects}
         </div>
         <div
           className={`shiny-text ${disabled ? "disabled" : ""} ${className}`}
           style={{ animationDuration }}
+          onClick={() => scrollToSection("skills")}
         >
           {Skills}
         </div>
         <div
           className={`shiny-text ${disabled ? "disabled" : ""} ${className}`}
           style={{ animationDuration }}
+          onClick={() => scrollToSection("contact")}
         >
           {Contact}
         </div>

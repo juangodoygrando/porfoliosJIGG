@@ -20,11 +20,12 @@
   display: flex;
   gap: 1.5rem;
   font-size: 2rem;
-  font-weight: 500;
+  
 }
 
 .shiny-text {
   color: #fafafaa4;
+  font-weight: 400;
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0) 40%,
@@ -36,6 +37,7 @@
   background-clip: text;
   display: inline-block;
   animation: shine 5s linear infinite;
+  cursor: pointer;
 }
 
 @keyframes shine {
@@ -69,23 +71,20 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
   }
 
   .nav_logo img {
     width: 700px;
     height: auto;
-    
   }
 
   .navBarShiny {
     flex-direction: column;
     gap: 1.5rem;
     font-size: 1.8rem;
-    padding:1.9rem 0  ;
+    padding: 1.9rem 0;
   }
 }
-
 
 @media screen and (max-width: 480px) {
   .nav_logo img {

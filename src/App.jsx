@@ -52,7 +52,7 @@ function App() {
         />
       </div>
       
-      <Proyects />
+      <div id="proyects"><Proyects /></div>
       {/* <div className="contenedorTitle">
         <TituloDeSeccion
           text="Skills"
@@ -80,7 +80,7 @@ function App() {
           onLetterAnimationComplete={handleAnimationComplete}
         />
       </div>
-      <Contact/>
+      <div id="contact"><Contact /></div>
     </div>
   );
 }
