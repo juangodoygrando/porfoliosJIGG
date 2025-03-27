@@ -40,14 +40,14 @@ const CardProyect = ({
           ))}
         </ul>
         <div className="containerLiveDemo">
-        <a
-          href={liveDemo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="card-button"
-        >
-          Ver proyecto
-        </a>
+          <a
+            href={liveDemo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-button"
+          >
+            Ver proyecto
+          </a>
         </div>
       </div>
     </div>

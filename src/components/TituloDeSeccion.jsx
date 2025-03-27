@@ -59,49 +59,46 @@ const TituloDeSeccion = ({
   );
 
   return (
-    
-      <p
-        ref={ref}
-        className={`split-parent ${className}`}
-        style={{
-          textAlign,
-          overflow: "hidden",
-          display: "inline",
-          whiteSpace: "normal",
-          wordWrap: "break-word",
-        }}
-      >
-        {words.map((word, wordIndex) => (
-          <span
-            key={wordIndex}
-            style={{ display: "inline-block", whiteSpace: "nowrap" }}
-          >
-            {word.map((letter, letterIndex) => {
-              const index =
-                words
-                  .slice(0, wordIndex)
-                  .reduce((acc, w) => acc + w.length, 0) + letterIndex;
+    <p
+      ref={ref}
+      className={`split-parent ${className}`}
+      style={{
+        textAlign,
+        overflow: "hidden",
+        display: "inline",
+        whiteSpace: "normal",
+        wordWrap: "break-word",
+      }}
+    >
+      {words.map((word, wordIndex) => (
+        <span
+          key={wordIndex}
+          style={{ display: "inline-block", whiteSpace: "nowrap" }}
+        >
+          {word.map((letter, letterIndex) => {
+            const index =
+              words.slice(0, wordIndex).reduce((acc, w) => acc + w.length, 0) +
+              letterIndex;
 
-              return (
-                <animated.span
-                  key={index}
-                  style={{
-                    ...springs[index],
-                    display: "inline-block",
-                    willChange: "transform, opacity",
-                  }}
-                >
-                  {letter}
-                </animated.span>
-              );
-            })}
-            <span style={{ display: "inline-block", width: "0.3em" }}>
-              &nbsp;
-            </span>
+            return (
+              <animated.span
+                key={index}
+                style={{
+                  ...springs[index],
+                  display: "inline-block",
+                  willChange: "transform, opacity",
+                }}
+              >
+                {letter}
+              </animated.span>
+            );
+          })}
+          <span style={{ display: "inline-block", width: "0.3em" }}>
+            &nbsp;
           </span>
-        ))}
-      </p>
-      
+        </span>
+      ))}
+    </p>
   );
 };
 

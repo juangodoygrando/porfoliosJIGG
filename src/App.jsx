@@ -10,77 +10,50 @@ import Proyects from "./components/Proyects";
 import Contact from "./components/Contact";
 
 function App() {
-  const handleAnimationComplete = () => {
-    
+  const AnimatedSectionTitle = ({ text, className, delay, onComplete }) => {
+    return (
+      <div className="contenedorTitle">
+        <TituloDeSeccion
+          text={text}
+          className={className}
+          delay={delay}
+          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+          easing="easeOutCubic"
+          threshold={0.2}
+          rootMargin="-50px"
+          onLetterAnimationComplete={onComplete}
+        />
+      </div>
+    );
   };
-
   return (
     <div className="app">
       <Navbar
         Proyects="Proyectos"
-        /* Skills="Skills" */
         Contact="Contacto"
         disabled={false}
         speed={3}
         className="custom-class"
       />
-      <div className="contenedorTitle">
-        <TituloDeSeccion
-          text="Acerca de mí"
-          className="title"
-          delay={120}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          easing="easeOutCubic"
-          threshold={0.2}
-          rootMargin="-50px"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
-      </div>
+      <AnimatedSectionTitle text="Acerca de mí" className="title" delay={120} />
       <Aboutme />
-      <div className="contenedorTitle">
-        <TituloDeSeccion
-          text="Proyectos"
-          className="title titleModificado"
-          delay={120}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          easing="easeOutCubic"
-          threshold={0.2}
-          rootMargin="-50px"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
+      <AnimatedSectionTitle
+        text="Proyectos"
+        className="title titleModificado"
+        delay={120}
+      />
+      <div id="proyects">
+        <Proyects />
       </div>
-      
-      <div id="proyects"><Proyects /></div>
-      {/* <div className="contenedorTitle">
-        <TituloDeSeccion
-          text="Skills"
-          className="title titleModificado"
-          delay={180}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          easing="easeOutCubic"
-          threshold={0.2}
-          rootMargin="-50px"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
-       
-      </div> */}
-      <div className="contenedorTitle">
-        <TituloDeSeccion
-          text="Conectemos!"
-          className="title titleModificado"
-          delay={120}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          easing="easeOutCubic"
-          threshold={0.2}
-          rootMargin="-50px"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
+      <AnimatedSectionTitle
+        text="Conectemos!"
+        className="title titleModificado"
+        delay={120}
+      />
+      <div id="contact">
+        <Contact />
       </div>
-      <div id="contact"><Contact /></div>
     </div>
   );
 }

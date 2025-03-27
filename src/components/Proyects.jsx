@@ -26,7 +26,7 @@ const Proyects = () => {
         title="Movix"
         image="/movixImage.png"
         description="Movix es una plataforma de e-commerce desarrollada en React.js que permite explorar, buscar y comprar dispositivos móviles. Optimizada para ofrecer una experiencia de compra fluida tanto en móviles como en escritorio."
-        languages={["HTML", "CSS","Javascript", "React Js"]}
+        languages={["HTML", "CSS", "Javascript", "React Js"]}
         liveDemo="https://movix-react-js-nu.vercel.app/"
         className="custom-spotlight-card"
         spotlightColor="rgba(255, 0, 0, 0.3)"

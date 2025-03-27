@@ -42,7 +42,7 @@ const Aboutme = () => {
           diferencia.
         </p>
       </div>
-      <div className="conteinerButton">
+      <div className="containerButton">
         <a
           className="buttonDescargarCV"
           href="https://drive.google.com/uc?export=download&id=11WauAB_BzGZ4I5h2mQO4g5uVJeWnpiOZ

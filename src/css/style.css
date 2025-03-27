@@ -21,10 +21,9 @@ body {
   text-align: center;
   color: white;
 }
-.titleModificado{
+.titleModificado {
   padding: 2rem 0 2rem;
 }
-
 
 .app {
   position: relative;
@@ -34,7 +33,11 @@ body {
 }
 
 @media (max-width: 768px) {
-  
+  .contenedorTitle {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; 
+  }
 }
 
 @media (max-width: 480px) {
