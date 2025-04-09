@@ -1,11 +1,16 @@
 .card-spotlight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
-  width: 25rem;
-  height: auto;
+  width: 100%;
+  max-width: 28rem;
+  height: 100%;
   border-radius: 1.5rem;
   border: 1px solid #222;
   background-color: rgb(116, 78, 78);
   padding: 1rem;
+  margin: 0 auto;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
@@ -38,8 +43,11 @@
 
 .containerProyects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  justify-items: center; 
+  gap: 2rem;
+  padding: 1rem;
+  align-items: stretch;
 }
 
 .card-image {
@@ -49,7 +57,11 @@
 }
 
 .card-content {
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1rem 1rem 0 1rem;
+  gap: 1rem;
 }
 
 .card-title {
@@ -62,6 +74,7 @@
   font-size: 1.1rem;
   color: #ddd;
   margin-bottom: 10px;
+  margin: 0;
 }
 
 .card-languages {
@@ -80,22 +93,32 @@
   align-content: center;
 }
 .containerLiveDemo {
+  margin-top: auto;
   width: 100%;
   display: flex;
   justify-content: center;
+  gap: 1rem;
   padding: 1rem;
 }
 
 .card-button {
-  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 10px;
-  padding: 8px 12px;
-  background-color: rgb(179, 57, 57);
-  color: #ddd;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+}
+
+.card-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.icon-image {
+  width: 34px;
+  height: 34px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -103,7 +126,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .card-spotlight {
-    width: 22rem;
+    width: 100%;
+    max-width: 100%;
   }
   .card-title {
     font-size: 1.5rem;
@@ -117,9 +141,7 @@
   .containerProyects {
     grid-template-columns: repeat(1, 1fr);
   }
-  .custom-spotlight-card {
-    padding-bottom: 1rem;
-  }
+  
   .card-spotlight {
     width: 80%;
     padding: 1.5rem;

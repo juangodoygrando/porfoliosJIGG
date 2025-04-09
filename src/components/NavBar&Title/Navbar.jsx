@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = ({
   Contact = "Contact", 
-  /* Skills = "Skills", */ 
+  Skills = "Skills", 
   Proyects = "Projects",
   disabled = false,
   speed = 4,
@@ -12,7 +12,7 @@ const Navbar = ({
 
   const menuItems = [
     { name: Proyects, target: "proyects" },
-    /* { name: Skills, target: "skills" }, */
+     { name: Skills, target: "skills" }, 
     { name: Contact, target: "contact" },
   ];
 

@@ -1,0 +1,93 @@
+.skills-formacion-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+
+.skills-formacion-box {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+.bounceCardsContainer {
+    position: relative;
+    max-width: 100%; 
+    overflow:visible; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  max-width: 200px;
+  aspect-ratio: 1;
+  border: 5px solid #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.divBounce{
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .skills-formacion-container {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .skills-formacion-box {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px; 
+  }
+  .bounceCardsContainer {
+    position: unset !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    height: auto;
+  }
+
+  .card {
+    position: static !important; 
+    transform: none !important; 
+    max-width:150px;
+    margin: 0 auto;
+    width: 100%;
+    aspect-ratio: 1;
+    transition: transform 0.3s ease;
+    
+  }
+  .card:hover {
+    transform: scale(1.2);
+  }
+
+  .image {
+    width: 100%;
+  }
+ 
+}
+
+
+@media (max-width: 1024px) {
+  .skills-formacion-container {
+    flex-direction: column; 
+
+  }
+
+  .skills-formacion-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
