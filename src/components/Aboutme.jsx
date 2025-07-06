@@ -28,7 +28,7 @@ const Aboutme = () => {
       <div className="containerButton">
         <a
           className="buttonDescargarCV"
-          href="https://drive.google.com/uc?export=download&id=1wsgYFA5W2MZ5eIyH3k7KyPWDZc5Tr-R3"
+          href="https://drive.google.com/uc?export=download&id=1ZWM8nE2dwdR2j-F5sgXYrycno2j69QJg"
           download="Juan Ignacio Godoy Grando - CV.pdf"
         >
           Descargar CV
