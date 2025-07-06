@@ -13,27 +13,18 @@ const Aboutme = () => {
 
       <div className="aboutmeBodyText">
         <p>
-          Soy desarrollador de software apasionado por la tecnología y el
-          diseño. Nací en Argentina y hace seis años me mudé a Barcelona.
-          Después de algunos años en el sector logístico, hace más de un año
-          decidí dar un giro a mi carrera y enfocarme en el desarrollo de
-          software, un área que siempre me llamó la atención por su creatividad
-          y dinamismo.
+          Soy Juan Ignacio Godoy Grando, desarrollador frontend especializado en React.js con dos años de experiencia construyendo aplicaciones web modernas y escalables. Nacido en Argentina y establecido en Barcelona desde hace seis años, mi expertise se centra en el ecosistema de React, trabajando intensivamente con React Hooks (useState, useEffect, useContext) y creando componentes reutilizables y modulares aplicando principios de composición y render props.
         </p>
 
         <p>
-          Me encanta la parte visual del desarrollo, la experiencia del usuario
-          y la optimización de interfaces. Disfruto pensando en cómo mejorar la
-          usabilidad y hacer que los sitios web sean más atractivos e
-          intuitivos.
+          Mi stack técnico incluye JavaScript ES6+, HTML5 semántico y CSS3 moderno (Flexbox, Grid, animaciones), siguiendo metodologías como BEM. He trabajado extensivamente con React Router para SPAs, optimización de performance usando React.memo, useMemo y lazy loading, y integración con APIs REST manejando llamadas asíncronas y estados de carga de forma eficiente.
         </p>
 
         <p>
-          Mi objetivo es seguir creciendo como desarrollador frontend, aportar
-          soluciones innovadoras y crear experiencias digitales que marquen la
-          diferencia.
+          Como desarrollador frontend en React, me enfoco en crear interfaces de usuario intuitivas que sean visualmente atractivas, accesibles y performantes. Aplico principios de responsive design y mobile-first, asegurando que cada aplicación funcione perfectamente en cualquier dispositivo. Mi experiencia con Git y GitHub me permite trabajar de manera colaborativa siguiendo flujos profesionales con branching strategies y code reviews.
         </p>
       </div>
+      
       <div className="containerButton">
         <a
           className="buttonDescargarCV"
